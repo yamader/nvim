@@ -11,6 +11,7 @@ vim.opt.cmdheight = 0
 vim.opt.laststatus = 0
 vim.opt.number = true
 vim.opt.showcmd = false
+vim.opt.showmode = false
 vim.opt.wrap = false
 
 -- edit
