@@ -1,3 +1,4 @@
+vim.api.nvim_create_user_command("W", "w", {})
 vim.api.nvim_create_user_command("Q", "q!", {})
 
 -- https://neovim.io/doc/user/editing.html#%2B%2Bp
