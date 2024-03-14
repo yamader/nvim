@@ -1,20 +1,4 @@
 return {
-  -- ❌ Disabling Plugins
-  { "flash.nvim", enabled = false },
-  { "lualine.nvim", enabled = false },
-  { "nvim-treesitter-context", enabled = false },
-
-  -- completely disable guicursor
-  {
-    "noice.nvim",
-    init = function()
-      local hacks = require("noice.util.hacks")
-      function hacks:hide_cursor() end
-      function hacks:show_cursor() end
-    end,
-  },
-
-  -- Supertab
   {
     "L3MON4D3/LuaSnip",
     keys = function()
@@ -60,17 +44,5 @@ return {
         end, { "i", "s" }),
       })
     end,
-  },
-
-  -- Make TokyoNight Transparent
-  {
-    "folke/tokyonight.nvim",
-    opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
-    },
   },
 }
