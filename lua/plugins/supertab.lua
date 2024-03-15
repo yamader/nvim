@@ -31,9 +31,6 @@ return {
             luasnip.expand_or_jump()
           elseif has_words_before() then
             cmp.complete()
-            if #cmp.get_entries() == 1 then
-              cmp.confirm({ select = true })
-            end
           else
             fallback()
           end
