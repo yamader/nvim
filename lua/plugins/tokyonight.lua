@@ -1,3 +1,4 @@
+-- https://www.lazyvim.org/configuration/recipes#make-tokyonight-transparent
 return {
   "folke/tokyonight.nvim",
   opts = {
