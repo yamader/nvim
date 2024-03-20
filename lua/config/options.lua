@@ -9,5 +9,6 @@ vim.opt.mouse = nil
 
 -- override LazyVim
 vim.opt.clipboard = nil
+vim.opt.ignorecase = false
 vim.opt.relativenumber = false
 vim.opt.undofile = false
