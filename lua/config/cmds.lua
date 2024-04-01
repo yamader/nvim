@@ -15,10 +15,10 @@ local function augroup(name)
 end
 
 vim.api.nvim_create_autocmd("VimEnter", {
-  group = augroup("autoupdate"),
+  group = augroup "autoupdate",
   callback = function()
     if require("lazy.status").has_updates then
-      require("lazy").update({ show = false })
+      require("lazy").update { show = false }
     end
   end,
 })
