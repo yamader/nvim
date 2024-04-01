@@ -2,6 +2,12 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
+-- https://neovim.io/doc/user/editing.html#%2B%2Bp
+vim.cmd [[
+  " Auto-create parent directories (except for URIs "://").
+  au BufWritePre,FileWritePre * if @% !~# '\(://\)' | call mkdir(expand('<afile>:p:h'), 'p') | endif
+]]
+
 -- https://github.com/LazyVim/LazyVim/issues/80#issuecomment-1478662212
 vim.api.nvim_create_autocmd("FileType", {
   command = "set formatoptions-=cro",
@@ -13,10 +19,10 @@ local function augroup(name)
 end
 
 vim.api.nvim_create_autocmd("VimEnter", {
-  group = augroup("autoupdate"),
+  group = augroup "autoupdate",
   callback = function()
     if require("lazy.status").has_updates then
-      require("lazy").update({ show = false })
+      require("lazy").update { show = false }
     end
   end,
 })
