@@ -15,6 +15,3 @@ vim.opt.list = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
-
--- theme
-vim.cmd.colorscheme "industry"
