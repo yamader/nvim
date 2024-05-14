@@ -1,3 +1,7 @@
 return {
-  { "hrsh7th/nvim-cmp", event = "InsertEnter" },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true,
+  },
 }

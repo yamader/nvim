@@ -6,7 +6,9 @@ vim.opt.mouse = nil
 vim.opt.cmdheight = 0
 vim.opt.laststatus = 0
 vim.opt.number = true
+vim.opt.scrolloff = 5
 vim.opt.showmode = false
+vim.opt.sidescrolloff = 16
 vim.opt.wrap = false
 
 -- edit

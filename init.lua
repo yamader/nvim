@@ -1,4 +1,4 @@
-require "config.opts"
-require "config.lazy"
 require "config.cmds"
 require "config.keys"
+require "config.lazy"
+require "config.opts"
