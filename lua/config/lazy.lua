@@ -12,3 +12,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup "plugins"
+
+-- auto update
+-- https://github.com/folke/lazy.nvim/issues/702#issuecomment-1903484213
+vim.api.nvim_create_autocmd("VimEnter", {
+  group = vim.api.nvim_create_augroup("lazyvim_autoupdate", { clear = true }),
+  callback = function()
+    if require("lazy.status").has_updates then
+      require("lazy").update { show = false }
+    end
+  end,
+})

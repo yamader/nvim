@@ -18,6 +18,11 @@ vim.opt.sidescrolloff = 16
 vim.opt.list = true
 vim.opt.wrap = false
 
+-- https://github.com/LazyVim/LazyVim/issues/80#issuecomment-1478662212
+vim.api.nvim_create_autocmd("FileType", {
+  command = "set formatoptions-=cro",
+})
+
 -- indent
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
