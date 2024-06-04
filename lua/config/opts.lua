@@ -3,9 +3,12 @@ vim.cmd "set gcr=" -- vim.opt.guicursor = nil
 vim.cmd "set mouse=" -- vim.opt.mouse = nil
 
 -- theme
-vim.cmd.colorscheme "vim"
-vim.cmd.highlight("Identifier", "ctermfg=white")
 vim.opt.termguicolors = false
+vim.cmd.colorscheme "vim"
+vim.cmd [[
+  hi Identifier ctermfg=white
+  hi Pmenu ctermfg=white ctermbg=black
+]]
 
 -- layout
 vim.opt.cmdheight = 0
@@ -20,7 +23,7 @@ vim.opt.wrap = false
 
 -- https://github.com/LazyVim/LazyVim/issues/80#issuecomment-1478662212
 vim.api.nvim_create_autocmd("FileType", {
-  command = "set formatoptions-=cro",
+  command = "set fo-=cro",
 })
 
 -- indent
