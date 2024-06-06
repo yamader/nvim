@@ -1,6 +1,5 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  build = ":silent TSUpdate",
   config = function()
     require("nvim-treesitter.configs").setup {
       auto_install = true,
@@ -8,4 +7,5 @@ return {
       indent = { enable = true },
     }
   end,
+  build = ":silent TSUpdate",
 }

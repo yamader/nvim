@@ -2,14 +2,6 @@
 vim.cmd "set gcr=" -- vim.opt.guicursor = nil
 vim.cmd "set mouse=" -- vim.opt.mouse = nil
 
--- theme
-vim.opt.termguicolors = false
-vim.cmd.colorscheme "vim"
-vim.cmd [[
-  hi Identifier ctermfg=white
-  hi Pmenu ctermfg=white ctermbg=black
-]]
-
 -- layout
 vim.opt.cmdheight = 0
 vim.opt.laststatus = 0
