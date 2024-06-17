@@ -15,5 +15,5 @@ return {
       },
     }
   end,
-  build = ":MasonUpdate",
+  build = ":silent MasonUpdate",
 }
