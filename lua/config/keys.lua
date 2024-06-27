@@ -1,4 +1,5 @@
 vim.g.mapleader = ";"
+vim.keymap.set("i", "<C-c>", "<C-[>")
 vim.keymap.set("n", "<C-S-Tab>", "<Cmd>bp<CR>")
 vim.keymap.set("n", "<C-Tab>", "<Cmd>bn<CR>")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
@@ -9,6 +10,4 @@ vim.keymap.set("n", "<Space>", ":")
 vim.keymap.set("n", "Q", "<Cmd>bp|sp|bn|bd<CR>")
 vim.keymap.set("n", "q", "")
 vim.keymap.set("n", "q:", "")
-vim.keymap.set({ "n", "i" }, "<C-[>", "<C-c>")
-vim.keymap.set({ "n", "i" }, "<C-c>", "<C-[>")
 vim.keymap.set({ "n", "i" }, "<F1>", "")

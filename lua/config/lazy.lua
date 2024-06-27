@@ -1,17 +1,16 @@
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system {
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable",
-    lazypath,
-  }
+if not vim.uv.fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  vim.fn.system { "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath }
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup "plugins"
+require("lazy").setup {
+  spec = "plugins",
+  performance = {
+    rtp = { reset = false },
+  },
+}
 
 -- auto update
 -- https://github.com/folke/lazy.nvim/issues/702#issuecomment-1903484213

@@ -1,6 +1,7 @@
 -- system
 vim.cmd "set gcr=" -- vim.opt.guicursor = nil
 vim.cmd "set mouse=" -- vim.opt.mouse = nil
+vim.opt.runtimepath:append "/usr/share/vim/vimfiles"
 
 -- layout
 vim.opt.cmdheight = 0
