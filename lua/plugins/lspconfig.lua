@@ -16,4 +16,5 @@ return {
     }
   end,
   build = ":silent MasonUpdate",
+  event = { "BufReadPost", "BufWritePost", "BufNewFile" }, -- LazyFile
 }

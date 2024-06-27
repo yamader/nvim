@@ -19,6 +19,6 @@ return {
     }
   end,
   keys = {
-    { "T", "<Cmd>Neotree<CR>", desc = "Neotree" },
+    { "T", "<Cmd>Neotree<CR>" },
   },
 }
