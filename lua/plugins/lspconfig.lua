@@ -23,7 +23,7 @@ return {
     { "gf", vim.lsp.buf.format },
     { "gi", vim.lsp.buf.implementation },
     { "gn", vim.lsp.buf.rename },
-    { "gr", vim.lsp.buf.renamreferences },
+    { "gr", vim.lsp.buf.references },
     { "gt", vim.lsp.buf.type_definition },
 
     { "g[", vim.diagnostic.goto_prev },

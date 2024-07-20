@@ -6,6 +6,7 @@ return {
       ignore_install = {
         "gitcommit",
         "godot_resource",
+        "ssh_config",
         "vimdoc",
       },
       highlight = { enable = true },
