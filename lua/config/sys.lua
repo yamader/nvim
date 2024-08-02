@@ -1,5 +1,4 @@
--- wtf
-local start = vim.treesitter.start
-vim.treesitter.start = function(...)
-  pcall(start, ...)
-end
+-- vimdocのtreesitterを無効化するため💩
+vim.cmd [[
+  au FileType * lua vim.treesitter.stop()
+]]
